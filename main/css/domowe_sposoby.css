@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: Helvetica;
+  color: #233d6b;
+  background-color: #E9E9E9;
+  z-index: 1;
+  line-height: 1.5;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #88BBD6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.logo {
+  font-family: 'Srisakdi', cursive;
+  font-size: 24px;
+  border: 1px solid #233d6b;
+  padding: 3px;
+  margin: 15px;
+}
+
+header li {
+  float: right;
+  margin: 20px 10px 0 10px;
+  list-style: none;
+  font-family: cursive;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+header a {
+  color: #233d6b;
+  text-decoration: none;
+}
+
+.logo:hover {
+  background-color: #ABCFE2;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  top: 70px;
+  bottom: 0;
+  margin: 75px 75px 25px 75px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.main h3 {
+  margin: 3% auto;
+}
+
+
+.main a:link {
+  color: #233d6b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main a:visited {
+  color: #233d6b;
+}
+
+h2 {
+  margin-bottom: 75px;
+}
+
+.ideas {
+  flex-direction: column;
+}
+
+.idea {
+  display: flex;
+  margin: 10px;
+}
+
+.idea img {
+  width: 25%;
+  min-height: 20vh;
+  max-height: 30vh;
+  object-fit: contain;
+}
+
+.idea p {
+  margin: 7%;
+}
+
+.idea p::first-line {
+  font-weight: bold;
+  line-height: 3;
+}
+.summary-class {
+  position: relative;
+}
+
+.scroll-btn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  z-index: 99;
+  font-size: 28px;
+  font-weight: 900;
+  border: none;
+  outline: none;
+  background-color: #99D3DF;
+  color: #ffffff;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.scroll-btn:hover {
+  background-color: #C1E4EB;
+}
+
+footer {
+  margin-top: 150px;
+}
+
+footer h5 {
+  left: 45%;
+  position: absolute;
+}
+
+footer p {
+  float: right;
+}
+
+@media (max-width: 600px) {
+  header {
+    height: 130px;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Allura', cursive;
+  }
+  .logo {
+    font-family: 'Allura', cursive;
+    font-size: 18px;
+    margin: 5px 10px 0 10px;
+  }
+  header li {
+    float: none;
+    font-size: 1rem;
+    margin: 0 10px 0 10px;
+  }
+  .main {
+    top: 130px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .main h3 {
+    margin: 7% auto;
+  }
+  .idea {
+    flex-direction: column;
+  }
+  .idea img {
+    width: 35%;
+    min-height: 100px;
+    max-height: 300px;
+    min-width: 100px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .scroll-btn {
+    bottom: 2%;
+    left: 5%;
+    font-size: 14px;
+    height: 30px;
+    width: 30px;
+  }
+  .footer-main-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25%;
+  }
+  .footer-content {
+    float: none;
+    position: static;
+    margin: 5% auto;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  header li {
+    font-size: 1.15rem;
+  }
+  .main h3 {
+    margin: 7% auto;
+  }
+  .idea {
+    flex-direction: column;
+  }
+  .idea img {
+    width: 35%;
+    min-height: 100px;
+    max-height: 300px;
+    min-width: 100px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .scroll-btn {
+    bottom: 5%;
+    left: 5%;
+    font-size: 20px;
+    height: 45px;
+    width: 45px;
+  }
+  .footer-main-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  .footer-content {
+    float: none;
+    position: static;
+    margin: 5% auto;
+  }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .footer-main-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+  }
+  .footer-content {
+    float: none;
+    position: static;
+    margin: 5% auto;
+  }
+}

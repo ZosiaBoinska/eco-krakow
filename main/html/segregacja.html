@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segregacja</title>
+    <link href="../css/segregacja.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header>
+      <a href="../index.html" class="logo">Bądź&nbsp;eko!</a>
+      <ul>
+        <li><a href="../html/domowe_sposoby.html">Domowe sposoby</a></li>
+        <li><a href="../html/segregacja.html">Segregacja</a></li>
+        <li><a href="../html/zakupy.html">Zakupy w duchu less waste</a></li>
+      </ul>
+    </header>
+
+    <div class="main">
+
+    <div>
+      <h2>Chcę segregować śmieci, ale skąd mam wiedzieć jak?</h2>
+      <p>Od 1 kwietnia w Krakowie pojawi się podział na 5 pojemników. Poza tym istnieją śmieci, które nie powinny być wyrzucane do żadnego z kubłów dostępnych u nas pod domami. Najzwięźlej obrazuje to następująca grafika zaczerpnięta ze strony krakowskiego MPO.</p>
+      <a id="newRulesPhoto"><img src="../photos/nowe_zasady.jpg" alt="new trash segregation rules" class="new-rules"></a>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closePhoto">&times;</span>
+          <img src="../photos/nowe_zasady.jpg" alt="new trash segregation rules">
+        </div>
+      </div>
+
+      <h3>A co jeśli nadal czegoś nie wiem?</h3>
+      <p>Dobrym źródłem informacji jest krakowskie MPO, które prowadzi swój profil na facebooku w bardzo przystępny sposób. Jeśli nie wierzysz, sprawdź <a href="https://www.facebook.com/mpokrakow/" target="_blank">tutaj</a>! Sama byłam zdziwiona tym, jak dużo można się tam dowiedzieć!</p>
+
+      <h3>Zaskakujące fakty</h3>
+      <p>Czasami bardzo się staramy, jednak okazuje się, że brakuje nam wiedzy i przez to popełniamy błędy. Parę przykładów możemy znaleźć poniżej. Jeśli temat segregacji nie ma przed Tobą tajemnic możesz spróbować swoich sił w <button class="start-quiz-btn" id="openQuiz">quizie!</button>. Jeśli jednak wolisz zacząć od zapoznania się z paroma często pojawiającymi się problemami to zapraszam do lektury poniższej listy. </p>
+      <div id="myModalQuiz" class="modal">
+        <div class="modal-quiz-content">
+          <span class="close1" id="closeQuiz1">&times;</span>
+          <form id="quiz" name="quiz" >
+
+            <p class="questions">Gdzie wyrzucić zatłuszczony karton po pizzy?</p>
+            <input type="radio" class="answers" name="question1" value="blue">pojemnik niebieski - papier i tektura<br>
+            <input type="radio" class="answers" name="question1" value="black">pojemnik czarny - odpady zmieszane<br>
+            <input type="radio" class="answers" name="question1" value="brown">pojemnik brązowy - odpady bio<br>
+
+            <p class="questions">Gdzie wyrzucać opakowania po środkach czystości?</p>
+            <input type="radio" class="answers" name="question2" value="black">pojemnik czarny - odpady zmieszane<br>
+            <input type="radio" class="answers" name="question2" value="pszok">PSZOK - Punkt Selektywnej Zbiórki Odpadów Komunalnych<br>
+            <input type="radio" class="answers" name="question2" value="yellow">pojemnik żółty - metale i tworzywa sztuczne<br>
+
+            <p class="questions">Gdzie wyrzucać zużyte ręczniki i papierowe chusteczki?</p>
+            <input type="radio" class="answers" name="question3" value="brown">pojemnik brązowy - odpady bio<br>
+            <input type="radio" class="answers" name="question3" value="blue">pojemnik niebieski - papier i tektura<br>
+            <input type="radio" class="answers" name="question3" value="black">pojemnik czarny - odpady zmieszane<br>
+
+            <p class="questions">Gdzie wyrzucać dezodoranty</p>
+            <input type="radio" class="answers" name="question4" value="yellow">pojemnik żółty - metale i tworzywa sztuczne<br>
+            <input type="radio" class="answers" name="question4" value="black">pojemnik czarny - odpady zmieszane<br>
+            <input type="radio" class="answers" name="question4" value="pszok">PSZOK - Punkt Selektywnej Zbiórki Odpadów Komunalnych<br>
+
+            <p class="questions">Gdzie wyrzucać resztki wędlin i ości?</p>
+            <input type="radio" class="answers" name="question5" value="brown">pojemnik brązowy - odpady bio<br>
+            <input type="radio" class="answers" name="question5" value="black">pojemnik czarny - odpady zmieszane<br>
+            <input type="radio" class="answers" name="question5" value="blue">pojemnik niebieski - papier i tektura<br>
+
+            <input type="button" class="finish-quiz-btn" id="quizCompleted" value="Finished!">
+
+            </form>
+          </div>
+
+          <div class="modal-quiz-content modal-quiz-content-answers" id="afterSubmit">
+            <span class="close2" id="closeQuiz2">&times;</span>
+            <p id="numberRight"></p>
+            <p id="feedback"></p>
+            <img id="feedbackPhoto">
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="examples-table1">
+        <table>
+          <tr>
+            <td><p>Karton po pizzy, hmmm... I tutaj pojawia się haczyk.</p></td>
+            <td><img id="image1" src="../photos/karton_po_pizzy.jpg" alt="photo showing how to dispose of dirty pizza box"></td>
+          </tr>
+          <tr>
+            <td><p>Naczynia i zbite szkło też nie są tak oczywiste.</p></td>
+            <td><img id="image2" src="../photos/rozbite_naczynia.png" alt="photo showing how to dispose of broken dishes "></td>
+          </tr>
+          <tr>
+            <td><p>Gdzie wyrzucać puste opakowania po lekach? Ważne jest, żeby pamiętać, że leków nie należy wyrzucać do śmieci, tylko do zbiorników na leki znajdujących się w niektórych aptekach.</p></td>
+            <td><img id="image3" src="../photos/opakowania_po_lekach.png" alt="photo showing how to dispose of medicine containers"></td>
+          </tr>
+          <tr>
+            <td><p>A co z kopertami?</p></td>
+            <td><img id="image4" src="../photos/koperty.png" alt="photo showing how to dispose of used envelopes"></td>
+          </tr>
+          <tr>
+            <td><p>A opakowania po kosmetykach?</p></td>
+            <td><img id="image5" src="../photos/opakowania_po_kosmetykach.png" alt="photo showing how to dispose of beuty products containers"></td>
+          </tr>
+          <tr>
+            <td><p>A co z pozostałościami po kawie na wynos?</p></td>
+            <td><img id="image6" src="../photos/kawa.png" alt="photo showing how to dispose of coffe cups"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="examples-table2">
+        <table>
+          <tr>
+            <td><p>Karton po pizzy, hmmm... I tutaj pojawia się haczyk.</p></td>
+            <td><img id="image7" src="../photos/karton_po_pizzy.jpg" alt="photo showing how to dispose of dirty pizza box"></td>
+            <td><p>Naczynia i zbite szkło też nie są tak oczywiste.</p></td>
+            <td><img id="image8" src="../photos/rozbite_naczynia.png" alt="photo showing how to dispose of broken dishes "></td>
+          </tr>
+          <tr>
+            <td><p>Gdzie wyrzucać puste opakowania po lekach? Ważne jest, żeby pamiętać, że leków nie należy wyrzucać do śmieci, tylko do zbiorników na leki znajdujących się w niektórych aptekach.</p></td>
+            <td><img id="image9" src="../photos/opakowania_po_lekach.png" alt="photo showing how to dispose of medicine containers"></td>
+            <td><p>A co z kopertami?</p></td>
+            <td><img id="image10" src="../photos/koperty.png" alt="photo showing how to dispose of used envelopes"></td>
+          </tr>
+          <tr>
+            <td><p>A opakowania po kosmetykach?</p></td>
+            <td><img id="image11" src="../photos/opakowania_po_kosmetykach.png" alt="photo showing how to dispose of beuty products containers"></td>
+            <td><p>A co z pozostałościami po kawie na wynos?</p></td>
+            <td><img id="image12" src="../photos/kawa.png" alt="photo showing how to dispose of coffe cups"></td>
+          </tr>
+        </table>
+      </div>
+
+      <footer class="footer-main-content">
+
+        <button id="myBtn" class="scroll-btn">&#x21e7;</button>
+        <p class="footer-content">Masz pomysł na ulepszenie strony?<br> Napisz do mnie na adres: przykladowy@kontakt.pl</p>
+        <h5 class="footer-content">&#169; 2019 Zosia Boinska</h5>
+
+      </footer>
+
+
+    </div>
+
+
+
+  <script src="../js/segregacja.js"></script>
+
+  </body>
+</html>
